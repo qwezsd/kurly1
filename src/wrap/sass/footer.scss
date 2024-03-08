@@ -1,0 +1,161 @@
+#footer {
+    width: 100%;
+    .container {
+        width: 100%;
+        border-top: 1px solid #f7f7f7;
+        margin-top: 40px;
+        .content {
+            width: 100%;
+            .row1 {
+                width: 100%;
+                max-width: 1050px;
+                margin: 0 auto;
+                display: flex;
+                justify-content: space-between;
+                padding: 30px 0;
+                .left {
+                    
+                    .p1 {
+                        h3 {
+                            font-size: 20px;
+                            font-weight: 500;
+                            padding-bottom: 20px;
+                        }
+                    }
+                    .p2 {
+                        padding-bottom: 20px;
+                        h4 {
+                            font-size: 16px;
+                            font-weight: 500;
+                            strong {
+                                padding-bottom: 20px;
+                                font-size: 28px;
+                                margin-right: 5px;
+
+                            }
+                        }
+                    }
+                    .p3 {
+                        .p3-box {
+                            display: flex;
+                            button {
+                                border: 1px solid #e2e2e2;
+                                width: 140px;
+                                height: 40px;
+                                background-color: #fff;
+                                margin: 0 16px 16px 0;
+                            }
+                            h5 {
+                                color: #999;
+                                font-size: 14px;
+                                font-weight: 500;
+                                line-height: 120%;
+                                margin-top: 2px;
+                            }
+                        }
+                    }
+                    .p4 {
+                        h6 {
+                            font-size: 12px;
+                            color: #999;
+                            font-weight: 500;
+                            a {
+                                color: inherit;
+                            }
+                        }
+                    }
+                }
+                .right {
+                    .top {
+                        ul {
+                            display: flex;
+                            align-items: center;
+                            padding-bottom: 30px;
+                            li {
+                                padding-right: 10px;
+                                span {
+                                    font-size: 14px;
+                                    font-weight: 500;
+                                }
+                                em {
+                                    font-size: 14px;
+                                    font-weight: 600;
+                                }
+                            }
+                        }
+                    }
+                    .center {
+                        margin-bottom: 40px;
+                        h5 {
+                            font-size: 12px;
+                            color: #999;
+                            font-weight: 500;
+                            line-height: 140%;
+                            a {
+                                color: #5f0080;
+                            }
+                        }
+                    }
+                    .bottom {
+                        img {
+                            width: 30px;
+                            height: 30px;
+                            margin-right: 10px;
+                        }
+                    }
+                }
+            }
+            .row2 {
+                width: 100%;
+                max-width: 1050px;
+                margin: 0 auto;
+                display: flex;
+                align-items: center;
+                border-top: 1px solid #eeee;
+                padding: 30px 0;
+                justify-content: space-between;
+                .payment {
+                    display: flex;
+                    img {
+                        width: 34px;
+                        margin-right: 10px;
+                        &.toss {
+                            width: 102px;
+                        }
+                    }
+                    h6 {
+                        font-size: 10px;
+                        color: #999;
+                        line-height: 140%;
+                        font-weight: 500;
+                    }
+                }
+            }
+            .row3 {
+                width: 100%;
+                background-color: #f7f7f7f7;
+                padding: 30px 0;
+                .copyRight {
+                    width: 100%;
+                    max-width: 1050px;
+                    margin: 0 auto;
+                    text-align: center;
+                    h5 {
+                        color: #999;
+                        font-size: 10px;
+                        line-height: 170%;
+                        font-weight: 500;
+                    }
+                    em {
+
+                        color: #999;
+                        font-size: 10px;
+                        line-height: 300%;
+                        font-weight: 500;
+                        
+                    }
+                }
+            }
+        }
+    }
+}

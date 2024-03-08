@@ -1,0 +1,44 @@
+
+// 1. 데이터베이스 접속 구현
+
+데이터베이스 접속 => DB서버주소 
+데이터베이스 접속 => DB사용자아이디
+데이터베이스 접속 => DB사용자비밀번호
+데이터베이스 접속 => DB이름
+이 정보들 가지고 데이터베이스에 접속 함
+데이터베이스 접속(컨넥션)
+$CONN = "DB서버주소, DB사용자아이디,DB사용자비밀번호,DB이름"
+
+
+// 2. 데이터베이스 조회
+SELECT ALL FROM 테이블 조건 id ='$id' ===> 해당하는 조건이 있는지
+
+$ID = 조회할 폼점송된 아이디
+
+$SQL = "SELECT * FROM kurly10_table1 WHERE id ='$ID';"
+퀴리실행(컨넥션, $SQL)
+mysqli_query(CONN, $SQL)
+
+
+// header.php
+닷홈 서버에서 테스트 점검
+qwefg.com/kurly/header.php
+
+// 아이디 중복 검사 (조회)
+select_id_check.php
+
+점검 중복 1, 중복 0f
+
+
+
+// 이메일 중복 검사 (조회)
+select_email_check.php
+qwefg.com/kurly/select_email_check.php
+
+// 추천인 아이디 검사 (조회)
+qwefg.com/kurly/select_choochun_check.php
+select_choochun_check.php
+
+//signup 
+signup.php
+qwefg.com/kurly/signup.php

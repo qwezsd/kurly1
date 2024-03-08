@@ -1,0 +1,42 @@
+#confirmModal {
+    width: 100%;
+    .container {
+        width: 100%;
+        background-color: rgba(0, 0, 0, 0.4);
+        position: fixed;
+        height:100vh;
+        top: 0;
+        left: 0;
+        z-index: 3;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        .content {
+            width: 360px;
+            height: auto;
+            background: #fff;
+            border-radius: 10px;
+            ul {
+                li {
+                    font-size: 16px;
+                    text-align: center;
+                    h4 {
+                        height: auto;
+                        color: #333;
+                        padding: 40px 30px;
+                        line-height: 150%;
+                    }
+                    button {
+                        width: 360px;
+                        height: 55px;
+                        border: none;
+                        border-top: 1px solid #e7e7e7;
+                        background: #fff;
+                        border-radius: 10px;
+                        color: #580080;
+                    }
+                }
+            }
+        }
+    }
+}
