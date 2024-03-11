@@ -6,7 +6,7 @@ import { WrapContext } from '../wrapContext/WrapContext';
 
 export default function Sub1Component (){
 
-    const {currentViewProduct} = React.useContenxt(WrapContext)
+    const {currentViewProduct} = React.useContext(WrapContext)
 
 const [state, setState] = React.useState({
     category: true,
