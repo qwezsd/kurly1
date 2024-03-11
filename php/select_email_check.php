@@ -4,7 +4,7 @@
     // 조회 서비스
     $EMAIL = $_POST['email'];
 
-    $SQL = "SELECT * FROM kurly10_table1 WHERE email='$EMAIL'";
+    $SQL = "SELECT * FROM Kurly10_table10 WHERE email='$EMAIL'";
     $RS = mysqli_query($CONN, $SQL);
 
     if(mysqli_num_rows($RS)>=1){

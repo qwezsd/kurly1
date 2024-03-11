@@ -625,24 +625,9 @@ export default function Sub5Component ({회원가입}){
             confirmModalOpen('이용약관동의 필수 항목 3개 이상을 선택하세요');
         }
         else {
-            //  전송 준비
-            // 휴대폰 형식
-            //const regExp = /^(\d{3})(\d{3,4})(\d{4})$/g;
-            // 휴대폰  010-7942-5305  010-348-6441
-            
-            //const regExp2 = /^(\d{6})(\d{7})$/g;
-            // 주민번호  701021-1661033 주민번호.replace(regExp, '$1-$2')
-            
-            //const regExp3 = /^(\d{3})(\d{2})(\d{5})$/g;
-            // 사업자번호 834-30-01199 사업자번호.replace(regExp, '$1-$2-$3')
-
-            // 휴대폰 형식
             const regExp = /^(\d{3})(\d{3,4})(\d{4})$/g;
 
-
-
-            // 서버에 전송될 폼데이터 준비
-            const formData = new FormData(); // 폼데이터 객체 생성
+            const formData = new FormData(); 
             formData.append("id", 아이디);
             formData.append("pw", 비밀번호1);
             formData.append("name", 이름);
@@ -655,20 +640,18 @@ export default function Sub5Component ({회원가입}){
             formData.append("service", 이용약관동의);
 
             axios({
-                url:'https://qwefg.com/kurly/signup.php', // 서버사이드 스크립트 언어 파일  signup.php
+                url:'https://qwefg.com/kurly/signup.php',
                 method:'POST',
                 data: formData
             })
             .then((res)=>{
                 if(res.status===200){  
+                    console.log(res)
                     console.log(res.data)
                     if(res.data===1){
                         confirmModalOpen('회원가입을 진심으로 감사드립니다.');
                         setTimeout(() => {
-                            //window.location.pathname = '/index'; 
-                            // 라우터 네비게이트 사용
-                            navigate('/index');  // 홈으로 이동
-
+                            navigate('/index');
                         }, 2000);
                     }   
                     else{

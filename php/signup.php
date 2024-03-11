@@ -13,7 +13,7 @@
     $service       = $_POST['service'];
 
     
-    $SQL = "INSERT INTO kurly10_table1(id, pw, name, email, hp, addr, gender, birth, chooga_input, service) 
+    $SQL = "INSERT INTO Kurly10_table10(id, pw, name, email, hp, addr, gender, birth, chooga_input, service) 
             VALUES('$id', '$pw', '$name', '$email', '$hp', '$addr', '$gender', '$birth', '$chooga_input','$service')";
     $RS = mysqli_query($CONN, $SQL);            
 

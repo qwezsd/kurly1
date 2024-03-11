@@ -14,7 +14,7 @@ $guests = $_POST['guests'];
 $event = $_POST['event'];
 
 
-$sql = "INSERT INTO kurly10_table1(이름, 이메일, 게스트, 이벤트)
+$sql = "INSERT INTO Kurly10_table10(이름, 이메일, 게스트, 이벤트)
         VALUES ('$name', '$email', '$guests','$event')";
 mysqli_query($conn, $sql)
 
