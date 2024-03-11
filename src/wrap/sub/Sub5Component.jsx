@@ -661,6 +661,7 @@ export default function Sub5Component ({회원가입}){
             })
             .then((res)=>{
                 if(res.status===200){  
+                    console.log(res.data)
                     if(res.data===1){
                         confirmModalOpen('회원가입을 진심으로 감사드립니다.');
                         setTimeout(() => {
@@ -671,7 +672,7 @@ export default function Sub5Component ({회원가입}){
                         }, 2000);
                     }   
                     else{
-                        confirmModalOpen('회원가입 폼데이터를 확인하고 다시시도해주세요');
+                        confirmModalOpen('회원가입 폼데이터를 확인하고 다시 시도해주세요');
                     }              
                 }
                 
@@ -716,7 +717,7 @@ export default function Sub5Component ({회원가입}){
                                 <li>
                                     <div className="gap">
                                         <label htmlFor="pw">비밀번호<i>*</i></label>
-                                        <input type="text" name='user_id' id='userId' placeholder='비밀번호를 입력해주세요'
+                                        <input type="password" name='user_id' id='userId' placeholder='비밀번호를 입력해주세요'
                                         value={비밀번호1}
                                         onChange={onChangePw1}
                                         maxLength={16}/>
@@ -726,7 +727,7 @@ export default function Sub5Component ({회원가입}){
                                 <li>
                                     <div className="gap">
                                         <label htmlFor="pw">비밀번호확인<i>*</i></label>
-                                        <input type="text" name='user_id' id='userId' placeholder='비밀번호를 한번 더 입력해주세요'
+                                        <input type="password" name='user_id' id='userId' placeholder='비밀번호를 한번 더 입력해주세요'
                                         value={비밀번호2}
                                         onChange={onChangePw2}
                                         maxLength={16}/>

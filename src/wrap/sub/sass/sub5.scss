@@ -60,7 +60,8 @@
                                 width: 333px;
                                 height: 46px;
                                 border: 1px solid #ddd;
-                            &[type=text] {
+                            &[type=text],
+                            &[type=password] {
                                 padding: 0 15px;
                                 border-radius: 3px;
                                 font-size: 16px;

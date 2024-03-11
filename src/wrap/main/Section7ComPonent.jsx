@@ -92,7 +92,7 @@ React.useEffect(()=>{
         <div id='section7'>
             <div className="slide-container">
                 <div className="slide-view">
-                   <Section7ChildComponent currentViewProduct={currentViewProduct} 샐러드={state.샐러드} 과일={state.과일} 계란={state.계란}  베이커리={state.베이커리} 베이비={state.베이비} 전자기기={state.전자기기}  헤어={state.헤어} 건강={state.건강} 주방기구={state.주방기구} 리빙={state.리빙} 메인={state.메인} 면={state.면} 반려동물={state.반려동물} 해산물={state.해산물} 스킨케어={state.스킨케어} 간식={state.간식} 전통주={state.전통주} 채소={state.채소} 물={state.물} 와인={state.와인}/>
+                   <Section7ChildComponent 샐러드={state.샐러드} 과일={state.과일} 계란={state.계란}  베이커리={state.베이커리} 베이비={state.베이비} 전자기기={state.전자기기}  헤어={state.헤어} 건강={state.건강} 주방기구={state.주방기구} 리빙={state.리빙} 메인={state.메인} 면={state.면} 반려동물={state.반려동물} 해산물={state.해산물} 스킨케어={state.스킨케어} 간식={state.간식} 전통주={state.전통주} 채소={state.채소} 물={state.물} 와인={state.와인}/>
                 </div>
             </div>
         </div>
