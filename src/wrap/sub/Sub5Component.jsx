@@ -25,7 +25,6 @@ export default function Sub5Component ({회원가입}){
 
     // 아이디
     const onChangeId = (e)=>{
-        // 6자 이상 16자 이하의 영문 혹은 영문과 숫자를 조합
         const RegExp=/(([a-zA-Z]+)([0-9]*)){6,16}/g
         let info_id = '';
         if(RegExp.test(e.target.value)===false){
@@ -48,19 +47,15 @@ export default function Sub5Component ({회원가입}){
             confirmModalOpen('6자 이상 16자 이하의 영문 혹은 영문과 숫자를 조합');
         }
         else {
-            // 2. 중복검사 Rest API  AXIOS => 서버에 전송
             const formData = new FormData(); 
             formData.append('id', 아이디);
             
             axios({
                 url:'https://qwefg.com/kurly/select_id_check.php',
                 method:'POST',
-                data: formData  // axios 폼데이터 형식으로 전송
             })
             .then((res)=>{
 
-                // console.log( res.data );  // 응답 내용은 String Number(문자열 )
-                
                     if(Number(res.data)===0){                   
                         confirmModalOpen('사용 할 수 있는 아이디 입니다');
                         setState({
@@ -95,7 +90,6 @@ export default function Sub5Component ({회원가입}){
     //영문/숫자/특수문자만 허용하며, 2개 이상 조합
     // 영문+숫자, 영문+특수문자, 숫자+특수문자
     const RegExp3 = /(([0-9]+[a-zA-z]+)+)|(([a-zA-Z]+[0-9]+)+)|(([a-zA-Z]+[~`₩!@#$%^&*()_+\-={}[\]\\\|;':"<>,.?\/]+)+)|(([~`₩!@#$%^&*()_+\-={}[\]\\|;':"<>,.?\/]+[a-zA-Z]+)+)|(([0-9]+[~`₩!@#$%^&*()_+\-={}[\]\\|;':"<>,.?\/]+)+)|(([~`₩!@#$%^&*()_+\-={}[\]\\|;':"<>,.?\/]+[0-9]+)+)/g
-    //공백제외
     const RegExp4 = /(\s)/g
 
     let info_pw1 = '';
@@ -141,11 +135,8 @@ export default function Sub5Component ({회원가입}){
         // 다른 건 다 됨
         const RegExp1 = /[~`₩!@#$%^&*()_+\-={}[\]\\|;':"<>,.?\/]/g
         let info_name = '';
-        let 이름 = e.target.value; // 이게 없으면 특수문자가 들어가기 때문에 적어줌
+        let 이름 = e.target.value; 
 
-        // 특수문자이면 삭제 입력 금지
-        // 특수문자를 공백으로 치환(replace)
-        // 문자열.replace(regExp, '')
 
         이름 = e.target.value.replace(RegExp1, '');
         if(e.target.value===""){
@@ -161,7 +152,7 @@ export default function Sub5Component ({회원가입}){
         })
     }
     const onChangeEmail =(e)=>{
-        // 이메일 형식으로 입력해 주세요.
+
         const regExp = /^([\.]?[A-Za-z0-9`~!@#$%^&*_+\"'/?{}]+)([.]?)([\.]?[A-Za-z0-9`~!@#$%^&*_+\"'/?{}]*)*@[A-Za-z0-9]+[A-Za-z0-9`~!@#$%^&*_+\"'/?{}]*\.[A-Za-z]{2,3}/g; 
         let info_email = '';
         if(regExp.test(e.target.value)===false){
@@ -190,7 +181,6 @@ export default function Sub5Component ({회원가입}){
             confirmModalOpen('이메일 형식으로 입력해 주세요.');
         }
         else {
-            // 2. 중복검사 Rest API  AXIOS => 서버에 전송
 
             const formData = new FormData();
             formData.append('email', 이메일);
@@ -251,7 +241,7 @@ export default function Sub5Component ({회원가입}){
         }
         setState({
             ...state,
-            휴대폰1 : 휴대폰1, // 필터링 됐기 때문에 해줘야 함
+            휴대폰1 : 휴대폰1,
             info_ph1 : info_ph1,
             is인증번호받기 : is인증번호받기
         })
@@ -323,7 +313,7 @@ export default function Sub5Component ({회원가입}){
             is휴대폰번호인증확인 : is휴대폰번호인증확인
         })
     }
-    //인증번호입력상자 온체인지 이벤트
+
     const onChangePh2 =(e)=>{
         if(e.target.value.length>=0){
         }
@@ -342,7 +332,7 @@ export default function Sub5Component ({회원가입}){
             is주소검색 : true
         })
     }
-    //주소주소즈소즈소즈솢스조슺ㅅ
+
    
     React.useEffect((e)=>{
         if(주소1!=='' && 주소2!==''){            
@@ -390,17 +380,6 @@ export default function Sub5Component ({회원가입}){
             생일 : e.target.value
         })
     }
-    // 생년월일 정규표현식
-    // 생년
-    // 태어난 년도 4자리를 정확하게 입력해주세요.
-    // 현재년도 - 100 <= 입력년도 ==> 생년월일을 다시 확인해주세요.
-    // 현재년도 < 입력년도 ===> 생년월일이 미래로 입력 되었습니다.
-
-    // 생월
-    // 12 < 입력 월 ===> 태어난 월을 정확하게 입력해주세요.
-
-    // 생일
-    // 31 < 입력 일 ===> 태어난 일을 정확하게 입력해주세요.
 
     React.useEffect(()=>{
         if (생년==='' && 생월==='' && 생일===''){
@@ -428,10 +407,10 @@ export default function Sub5Component ({회원가입}){
                     info_birth : '생년월일이 미래로 입력 되었습니다.'
                 })
             }
-            else { //생년 클리어 !! (아님 미자 안 되는 거 date 때 해야 함)
+            else { 
                 setState({
                     ...state,
-                    info_birth : '', // 이거 안 해주면 끝까지 나타남... 까다롭네;
+                    info_birth : '',
                 })
                 if(생월 === '' || 생월 <1 || 생월 >12){
                     setState({
@@ -489,7 +468,7 @@ export default function Sub5Component ({회원가입}){
         e.preventDefault();
         
 
-        // 2. 중복검사 Rest API  AXIOS => 서버에 전송
+
         const formData = new FormData();
         formData.append('id', 추천인아이디);
 
@@ -517,19 +496,6 @@ export default function Sub5Component ({회원가입}){
 
     }
 
-    // 이용약관동의 : 체크 이벤트
-    // 전체동의
-    // 1.전체동의를 체크하면 e.target.checked === true
-    // 이용약관동의 배열에 전체 동의 항목을 모두 삽입
-    // 그러면 각 체크박스 항목을 체크 이벤트가 발생하게 된다
-    // (모두 체크 됨, 7개 ㅊㅊ)
-    
-    //2. 전체동듸 체크를 해지하면?
-    // 이용약관동의 배열을 모두 비운다. === > 빈배열 됨
-    // 그러면 각 체크박스 항목을 체크==false 이벤트가 발생되게 한다.
-    // (모두 체크 해제 됨 7개 ㅗㅗ)
-
-
     const onChangeAllAgree =(e)=>{
         if(e.target.checked===true){
             setState({
@@ -544,15 +510,6 @@ export default function Sub5Component ({회원가입}){
             })
         }
     }
-    //개별체크 이벤트
-    //체크가 선택되면 이용약관동의 배열에 체크항목을 추가
-    // 구현 방법은? 누적추가
-
-    //체크 해제되면 배열에 체크항목 삭제
-    // 구현 방법은? 배열에 저장된 항목 중 체크 해제한 항목을 제외하고 재구성
-
-    //필터 메서드를 활용해서 체크 해제된 항목만 제외하고 배열을 재구성
-    //화살표함수 한 줄 코딩(중괄호 제외) 즉시 처리 반환
     const onChangeAgree=(e)=>{
         let imsi = [];
         if(e.target.checked===true){
@@ -573,7 +530,7 @@ export default function Sub5Component ({회원가입}){
         
         let sum = 0;
         arr.map((item)=>{
-            sum += item; // 누적연산 0+1+1+0+0+0+1 => 3
+            sum += item; 
         });
         
         setState({
@@ -583,11 +540,8 @@ export default function Sub5Component ({회원가입}){
 
     },[이용약관동의]);
 
-    // 폼 전송
     const onSubmitSignup=(e)=>{
         e.preventDefault();
-        // 유효성 검사
-        // 폼 입력상자 모든 빈값 체크
         if( 아이디 ===  ""){
             confirmModalOpen('아이디를 입력하세요');
         }
