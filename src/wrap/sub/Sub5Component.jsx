@@ -53,6 +53,7 @@ export default function Sub5Component ({회원가입}){
             axios({
                 url:'https://qwefg.com/kurly/select_id_check.php',
                 method:'POST',
+                data: formData
             })
             .then((res)=>{
 
@@ -758,28 +759,45 @@ export default function Sub5Component ({회원가입}){
                                     </div>
                                 </li>
                                 <li>
-                                    <div className="gap">
-                                        <label htmlFor="gender">성별</label>
+                                    <div className='gap'>
+                                        <label htmlFor='male'>성별</label>
                                         <div className="gender-box">
                                             <label htmlFor="male">
-                                            <input type="radio" name='gender' id='male' value='male'
-                                            onChange={onChangeGender}
-                                            checked={state.성별.includes('male')}/>남자
+                                                <input 
+                                                    type="radio" 
+                                                    name='gender' 
+                                                    id='male' 
+                                                    value='남자' 
+                                                    onChange={onChangeGender} 
+                                                    
+                                                    checked={state.성별.includes('남자')}
+                                                />남자
                                             </label>
                                             <label htmlFor="female">
-                                            <input type="radio" name='gender' id='female' value='female' 
-                                            onChange={onChangeGender}
-                                            checked={state.성별.includes('female')}
-                                            />여자
+                                                <input 
+                                                    type="radio" 
+                                                    name='gender' 
+                                                    id='female' 
+                                                    value='여자' 
+                                                    onChange={onChangeGender} 
+                                                    
+                                                    checked={state.성별.includes('여자')}
+                                                />여자
                                             </label>
                                             <label htmlFor="none">
-                                            <input type="radio" name='gender' id='none' value='none' 
-                                            onChange={onChangeGender}
-                                            checked={state.성별.includes('none')}/>선택안함
-                                            </label>
-                                        </div>
+                                                <input 
+                                                    type="radio" 
+                                                    name='gender' 
+                                                    id='none' 
+                                                    value='선택안함'
+                                                    onChange={onChangeGender} 
+                                                    
+                                                    checked={state.성별.includes('선택안함')}
+                                                />선택안함
+                                            </label>                                
+                                        </div>                                  
                                     </div>
-                                </li>
+                                </li> 
                                 <li>
                                     <div className="gap">
                                         <label htmlFor="birth">생년월일</label>
@@ -993,7 +1011,7 @@ Sub5Component.defaultProps = {
         비밀번호1:'',
         비밀번호2: '',
         이름 : '',
-        성별 : 'none', 
+        성별 : '선택안함', 
         이메일 : '',
         휴대폰1 : '',
         휴대폰2 : '',
