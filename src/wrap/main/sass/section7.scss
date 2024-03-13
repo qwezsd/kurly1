@@ -25,6 +25,7 @@
                         }
                     }
                     .sub-title {
+                        width: 100%;
                         ul {
                             display: flex;
                             flex-flow: row wrap;
@@ -33,6 +34,7 @@
                             li {
                                 margin: 0 5px 20px;
                                 button {
+                                    cursor: pointer;
                                     height: 40px;
                                     background-color: #f7f7f7;
                                     border: 0;

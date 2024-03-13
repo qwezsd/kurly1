@@ -261,7 +261,7 @@ export default function Section7ChildComponent ({ 샐러드, 과일, 계란, 베
                 <li><button onClick={onClickElectro} className={state.electro ? 'on' : ''}>가전제품</button></li>
                 <li><button onClick={onClickHealth} className={state.health ? 'on' : ''}>건강식품</button></li>
                 <li><button onClick={onClickBaby} className={state.baby ? 'on' : ''}>베이비·키즈·완구</button></li>
-                <li><button onClick={onClickWine} className={state.whine ? 'on' : ''}>와인·위스키</button></li>
+                <li><button onClick={onClickWine} className={state.wine ? 'on' : ''}>와인·위스키</button></li>
                 <li><button onClick={onClickPet} className={state.pet ? 'on' : ''}>반려동물</button></li>
             </ul>
         </div>
