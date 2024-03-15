@@ -24,7 +24,7 @@ const [state, setState] = React.useState({
     issub6 : true,
 
     comment : false,
-    슬라이드:[]
+    알뜰쇼핑:[]
 })
 const [state2, setState2] = React.useState({
 
@@ -250,13 +250,13 @@ const onMouseLeaveComment = ()=>{
 }
 
 axios({
-    url : './data/sub/sub1.json',
+    url : './data/sub/sub3.json',
     method : 'GET'
 })
 .then((res)=>{
     setState({
         ...state,
-        슬라이드 : res.data.슬라이드
+        알뜰쇼핑 : res.data.알뜰쇼핑
     })
 })
 .catch((err)=>{
@@ -266,7 +266,7 @@ axios({
         <div id='sub3'>
             <div className="container">
                 <div className="main-img">
-                    <a href="!#"><img src="./img/sub1/K55OxyfwVlSr1BigzjhQSKAIzi0WNulp0EnVvnMQ.jpg" alt="" /></a>
+                    <a href="!#"><img src="./img/sub3/KMzyZlWLwdCzH17OQ2kU0KNQHw1vjqbIddogqwJl.jpg" alt="" /></a>
                 </div>
                 <div className="title">
                     <h2>알뜰쇼핑</h2>
@@ -1260,7 +1260,7 @@ axios({
                                 <span>높은 가격순</span>
                             </div>
                         </div>  
-                        <Sub3ChildComponent currentViewProduct={currentViewProduct} 슬라이드={state.슬라이드} />
+                        <Sub3ChildComponent currentViewProduct={currentViewProduct} 알뜰쇼핑={state.알뜰쇼핑} />
                     </div>
                 </div>
             </div>

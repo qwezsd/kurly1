@@ -1,7 +1,7 @@
 import React from 'react';
 import { WrapContext } from '../wrapContext/WrapContext';
 
-export default function Sub3ChildComponent ({슬라이드}) {
+export default function Sub3ChildComponent ({알뜰쇼핑}) {
 
     const [product, setProduct] = React.useState([]);
     const [flag, setFlag] = React.useState(false);
@@ -15,12 +15,12 @@ export default function Sub3ChildComponent ({슬라이드}) {
     return (
     <div className="slide-view">
         <ul className="slide-wrap">
-            {슬라이드.map((item,idx)=>{
+            {알뜰쇼핑.map((item,idx)=>{
             return(
-                <li onClick={(e)=>onClickViewProduct(e, item, './img/sub1/')} className="slide" key={item.번호}>
+                <li onClick={(e)=>onClickViewProduct(e, item, './img/sub3/')} className="slide" key={item.번호}>
                     <div className="gap">
                         <div className="img-box">
-                            <img src={`./img/sub1/${item.이미지}`} alt="" />
+                            <img src={`./img/sub3/${item.이미지}`} alt="" />
                         </div>
                         <div className="btn-box">
                             <button>

@@ -86,9 +86,7 @@ export default function Section6ComPonent () {
                                             <div className="gap">
                                                 <div className="img-box">
                                                     <img src={`./img/section6/${item.이미지}`} alt="" />
-                                                    <div className="discount-box">
-                                                        <h4>15%쿠폰+증정</h4>
-                                                    </div>
+                                                   
                                                 </div>
                                                 <div className="btn-box">
                                                     <button>
@@ -101,7 +99,7 @@ export default function Section6ComPonent () {
                                                     <div className="p2"><h5>{item.정가.toLocaleString('ko-KO')}원</h5></div>
                                                     <div className="p3">
                                                         <strong>{Math.round(item.할인율 * 100)}%</strong>
-                                                        <em>{Math.round((item.정가 * 1-item.할인율)).toLocaleString('ko-KO')}원</em>
+                                                        <em>{Math.round((item.정가 * (1-item.할인율))).toLocaleString('ko-KO')}원</em>
                                                     </div>
                                                     <div className="p4">
                                                         <img src="./img/section2/mention.svg" alt="" />
@@ -120,7 +118,7 @@ export default function Section6ComPonent () {
                             { cnt>0 &&
                             <button onClick={onClickPrevArrow}  className='prev' ><img src="./img/section2/pre_arrow.svg" alt="" /></button>
                         }
-                        {cnt<4 &&
+                        {cnt<3 &&
                             <button onClick={onClickNextArrow} className='next'><img src="./img/section2/pre_arrow.svg" alt="" /></button>
                         } 
                         </div>

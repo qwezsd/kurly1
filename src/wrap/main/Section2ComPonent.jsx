@@ -7,17 +7,13 @@ import { WrapContext } from '../wrapContext/WrapContext';
 export default function Section2ComPonent () {
 
     const { currentViewProduct } = React.useContext( WrapContext );
-    // const [cnt, setCnt] = React.useState(0)
     const slide = React.useRef();
     const slideBox = React.useRef();
-    const [n, setN] = React.useState(0);
     const [state, setState] = React.useState({
         cnt : 0,
         슬라이드 : []
     })
     const {cnt, 슬라이드} = state;
-    const [product, setProduct] = React.useState([]);
-    const [flag, setFlag] = React.useState(false);
 
     const onClickPrevArrow = (e) => {
         e.preventDefault();
@@ -33,14 +29,21 @@ export default function Section2ComPonent () {
             cnt : state.cnt+1
         })
     }
-    //메인 슬라이드
-    const mainSlide = () => {
-        slide.current.style.transform = `translateX(${-1068 * cnt}px)`
-        slide.current.style.transition = `all 0.3s ease-in-out`
+
+
+    
+    const mainSlide=()=>{
+        slide.current.style.transition = `all 0.6s ease-in-out`;
+        slide.current.style.transform = `translateX(${-1068*cnt}px)`;
     }
+
     React.useEffect(()=>{
         mainSlide();
-    }, [state.cnt])
+    },[cnt]);
+
+
+
+
 
 
     axios({
@@ -87,9 +90,7 @@ export default function Section2ComPonent () {
                                             <div className="gap">
                                                 <div className="img-box">
                                                     <img src={`./img/section2/${item.이미지}`} alt="" />
-                                                    <div className="discount-box">
-                                                        <h4>15%쿠폰+증정</h4>
-                                                    </div>
+                                                    
                                                 </div>
                                                 <div className="btn-box">
                                                     <button>
@@ -101,8 +102,8 @@ export default function Section2ComPonent () {
                                                     <div className="p1"><h3>{item.상품명}</h3></div>
                                                     <div className="p2"><h5>{item.정가.toLocaleString('ko-KO')}원</h5></div>
                                                     <div className="p3">
-                                                        <strong>{Math.round(item.할인율 * 100)}%</strong>
-                                                        <em>{Math.round((item.정가 * 1-item.할인율)).toLocaleString('ko-KO')}원</em>
+                                                        <strong>{item.할인율 * 100}%</strong>
+                                                        <em>{Math.round(item.정가 *(1-item.할인율)).toLocaleString('ko-KO')}원</em>
                                                     </div>
                                                     <div className="p4">
                                                         <img src="./img/section2/mention.svg" alt="" />
@@ -121,7 +122,7 @@ export default function Section2ComPonent () {
                             { cnt>0 &&
                             <button onClick={onClickPrevArrow}  className='prev' ><img src="./img/section2/pre_arrow.svg" alt="" /></button>
                         }
-                        {cnt<3 &&
+                        {cnt<2 &&
                             <button onClick={onClickNextArrow} className='next'><img src="./img/section2/pre_arrow.svg" alt="" /></button>
                         } 
                         </div>

@@ -276,9 +276,7 @@ export default function Section7ChildComponent ({ 샐러드, 과일, 계란, 베
                         <div className="gap">
                             <div className="img-box">
                                 <img src={`./img/section7/salad/${item.이미지}`} alt="" />
-                                <div className="discount-box">
-                                    <h4>15%쿠폰+증정</h4>
-                                </div>
+                                
                             </div>
                             <div className="btn-box">
                                 <button>
@@ -291,7 +289,7 @@ export default function Section7ChildComponent ({ 샐러드, 과일, 계란, 베
                                 <div className="p2"><h5>{item.정가.toLocaleString('ko-KO')}원</h5></div>
                                 <div className="p3">
                                     <strong>{Math.round(item.할인율 * 100)}%</strong>
-                                    <em>{Math.round((item.정가 * 1-item.할인율)).toLocaleString('ko-KO')}원</em>
+                                    <em>{Math.round((item.정가 * (1-item.할인율))).toLocaleString('ko-KO')}원</em>
                                 </div>
                                 <div className="p4">
                                     <img src="./img/section2/mention.svg" alt="" />
@@ -313,9 +311,7 @@ export default function Section7ChildComponent ({ 샐러드, 과일, 계란, 베
                         <div className="gap">
                             <div className="img-box">
                                 <img src={`./img/section7/fruit/${item.이미지}`} alt="" />
-                                <div className="discount-box">
-                                    <h4>15%쿠폰+증정</h4>
-                                </div>
+                                
                             </div>
                             <div className="btn-box">
                                 <button>
@@ -328,7 +324,7 @@ export default function Section7ChildComponent ({ 샐러드, 과일, 계란, 베
                                 <div className="p2"><h5>{item.정가.toLocaleString('ko-KO')}원</h5></div>
                                 <div className="p3">
                                     <strong>{Math.round(item.할인율 * 100)}%</strong>
-                                    <em>{Math.round((item.정가 * 1-item.할인율)).toLocaleString('ko-KO')}원</em>
+                                    <em>{Math.round((item.정가 * (1-item.할인율))).toLocaleString('ko-KO')}원</em>
                                 </div>
                                 <div className="p4">
                                     <img src="./img/section2/mention.svg" alt="" />
@@ -350,9 +346,7 @@ export default function Section7ChildComponent ({ 샐러드, 과일, 계란, 베
                         <div className="gap">
                             <div className="img-box">
                                 <img src={`./img/section7/egg/${item.이미지}`} alt="" />
-                                <div className="discount-box">
-                                    <h4>15%쿠폰+증정</h4>
-                                </div>
+                                
                             </div>
                             <div className="btn-box">
                                 <button>
@@ -365,7 +359,7 @@ export default function Section7ChildComponent ({ 샐러드, 과일, 계란, 베
                                 <div className="p2"><h5>{item.정가.toLocaleString('ko-KO')}원</h5></div>
                                 <div className="p3">
                                     <strong>{Math.round(item.할인율 * 100)}%</strong>
-                                    <em>{Math.round((item.정가 * 1-item.할인율)).toLocaleString('ko-KO')}원</em>
+                                    <em>{Math.round((item.정가 * (1-item.할인율))).toLocaleString('ko-KO')}원</em>
                                 </div>
                                 <div className="p4">
                                     <img src="./img/section2/mention.svg" alt="" />
@@ -387,9 +381,7 @@ export default function Section7ChildComponent ({ 샐러드, 과일, 계란, 베
                         <div className="gap">
                             <div className="img-box">
                                 <img src={`./img/section7/backery/${item.이미지}`} alt="" />
-                                <div className="discount-box">
-                                    <h4>15%쿠폰+증정</h4>
-                                </div>
+                                
                             </div>
                             <div className="btn-box">
                                 <button>
@@ -402,7 +394,7 @@ export default function Section7ChildComponent ({ 샐러드, 과일, 계란, 베
                                 <div className="p2"><h5>{item.정가.toLocaleString('ko-KO')}원</h5></div>
                                 <div className="p3">
                                     <strong>{Math.round(item.할인율 * 100)}%</strong>
-                                    <em>{Math.round((item.정가 * 1-item.할인율)).toLocaleString('ko-KO')}원</em>
+                                    <em>{Math.round((item.정가 * ((1-item.할인율)))).toLocaleString('ko-KO')}원</em>
                                 </div>
                                 <div className="p4">
                                     <img src="./img/section2/mention.svg" alt="" />
@@ -424,9 +416,7 @@ export default function Section7ChildComponent ({ 샐러드, 과일, 계란, 베
                         <div className="gap">
                             <div className="img-box">
                                 <img src={`./img/section7/baby/${item.이미지}`} alt="" />
-                                <div className="discount-box">
-                                    <h4>15%쿠폰+증정</h4>
-                                </div>
+                                
                             </div>
                             <div className="btn-box">
                                 <button>
@@ -439,7 +429,7 @@ export default function Section7ChildComponent ({ 샐러드, 과일, 계란, 베
                                 <div className="p2"><h5>{item.정가.toLocaleString('ko-KO')}원</h5></div>
                                 <div className="p3">
                                     <strong>{Math.round(item.할인율 * 100)}%</strong>
-                                    <em>{Math.round((item.정가 * 1-item.할인율)).toLocaleString('ko-KO')}원</em>
+                                    <em>{Math.round((item.정가 * (1-item.할인율))).toLocaleString('ko-KO')}원</em>
                                 </div>
                                 <div className="p4">
                                     <img src={`./img/section2/${item.후기이미지}`} alt="" />
@@ -461,9 +451,7 @@ export default function Section7ChildComponent ({ 샐러드, 과일, 계란, 베
                         <div className="gap">
                             <div className="img-box">
                                 <img src={`./img/section7/electro/${item.이미지}`} alt="" />
-                                <div className="discount-box">
-                                    <h4>15%쿠폰+증정</h4>
-                                </div>
+                                
                             </div>
                             <div className="btn-box">
                                 <button>
@@ -476,7 +464,7 @@ export default function Section7ChildComponent ({ 샐러드, 과일, 계란, 베
                                 <div className="p2"><h5>{item.정가.toLocaleString('ko-KO')}원</h5></div>
                                 <div className="p3">
                                     <strong>{Math.round(item.할인율 * 100)}%</strong>
-                                    <em>{Math.round((item.정가 * 1-item.할인율)).toLocaleString('ko-KO')}원</em>
+                                    <em>{Math.round((item.정가 * (1-item.할인율))).toLocaleString('ko-KO')}원</em>
                                 </div>
                                 <div className="p4">
                                     <img src="./img/section2/mention.svg" alt="" />
@@ -498,9 +486,7 @@ export default function Section7ChildComponent ({ 샐러드, 과일, 계란, 베
                         <div className="gap">
                             <div className="img-box">
                                 <img src={`./img/section7/hair/${item.이미지}`} alt="" />
-                                <div className="discount-box">
-                                    <h4>15%쿠폰+증정</h4>
-                                </div>
+                                
                             </div>
                             <div className="btn-box">
                                 <button>
@@ -513,7 +499,7 @@ export default function Section7ChildComponent ({ 샐러드, 과일, 계란, 베
                                 <div className="p2"><h5>{item.정가.toLocaleString('ko-KO')}원</h5></div>
                                 <div className="p3">
                                     <strong>{Math.round(item.할인율 * 100)}%</strong>
-                                    <em>{Math.round((item.정가 * 1-item.할인율)).toLocaleString('ko-KO')}원</em>
+                                    <em>{Math.round((item.정가 * (1-item.할인율))).toLocaleString('ko-KO')}원</em>
                                 </div>
                                 <div className="p4">
                                     <img src="./img/section2/mention.svg" alt="" />
@@ -535,9 +521,7 @@ export default function Section7ChildComponent ({ 샐러드, 과일, 계란, 베
                         <div className="gap">
                             <div className="img-box">
                                 <img src={`./img/section7/health/${item.이미지}`} alt="" />
-                                <div className="discount-box">
-                                    <h4>15%쿠폰+증정</h4>
-                                </div>
+                                
                             </div>
                             <div className="btn-box">
                                 <button>
@@ -550,7 +534,7 @@ export default function Section7ChildComponent ({ 샐러드, 과일, 계란, 베
                                 <div className="p2"><h5>{item.정가.toLocaleString('ko-KO')}원</h5></div>
                                 <div className="p3">
                                     <strong>{Math.round(item.할인율 * 100)}%</strong>
-                                    <em>{Math.round((item.정가 * 1-item.할인율)).toLocaleString('ko-KO')}원</em>
+                                    <em>{Math.round((item.정가 * (1-item.할인율))).toLocaleString('ko-KO')}원</em>
                                 </div>
                                 <div className="p4">
                                     <img src="./img/section2/mention.svg" alt="" />
@@ -572,9 +556,7 @@ export default function Section7ChildComponent ({ 샐러드, 과일, 계란, 베
                         <div className="gap">
                             <div className="img-box">
                                 <img src={`./img/section7/kitchen/${item.이미지}`} alt="" />
-                                <div className="discount-box">
-                                    <h4>15%쿠폰+증정</h4>
-                                </div>
+                                
                             </div>
                             <div className="btn-box">
                                 <button>
@@ -587,7 +569,7 @@ export default function Section7ChildComponent ({ 샐러드, 과일, 계란, 베
                                 <div className="p2"><h5>{item.정가.toLocaleString('ko-KO')}원</h5></div>
                                 <div className="p3">
                                     <strong>{Math.round(item.할인율 * 100)}%</strong>
-                                    <em>{Math.round((item.정가 * 1-item.할인율)).toLocaleString('ko-KO')}원</em>
+                                    <em>{Math.round((item.정가 * (1-item.할인율))).toLocaleString('ko-KO')}원</em>
                                 </div>
                                 <div className="p4">
                                     <img src="./img/section2/mention.svg" alt="" />
@@ -609,9 +591,7 @@ export default function Section7ChildComponent ({ 샐러드, 과일, 계란, 베
                         <div className="gap">
                             <div className="img-box">
                                 <img src={`./img/section7/living/${item.이미지}`} alt="" />
-                                <div className="discount-box">
-                                    <h4>15%쿠폰+증정</h4>
-                                </div>
+                                
                             </div>
                             <div className="btn-box">
                                 <button>
@@ -624,7 +604,7 @@ export default function Section7ChildComponent ({ 샐러드, 과일, 계란, 베
                                 <div className="p2"><h5>{item.정가.toLocaleString('ko-KO')}원</h5></div>
                                 <div className="p3">
                                     <strong>{Math.round(item.할인율 * 100)}%</strong>
-                                    <em>{Math.round((item.정가 * 1-item.할인율)).toLocaleString('ko-KO')}원</em>
+                                    <em>{Math.round((item.정가 * (1-item.할인율))).toLocaleString('ko-KO')}원</em>
                                 </div>
                                 <div className="p4">
                                     <img src="./img/section2/mention.svg" alt="" />
@@ -646,9 +626,7 @@ export default function Section7ChildComponent ({ 샐러드, 과일, 계란, 베
                         <div className="gap">
                             <div className="img-box">
                                 <img src={`./img/section7/main/${item.이미지}`} alt="" />
-                                <div className="discount-box">
-                                    <h4>15%쿠폰+증정</h4>
-                                </div>
+                                
                             </div>
                             <div className="btn-box">
                                 <button>
@@ -661,7 +639,7 @@ export default function Section7ChildComponent ({ 샐러드, 과일, 계란, 베
                                 <div className="p2"><h5>{item.정가.toLocaleString('ko-KO')}원</h5></div>
                                 <div className="p3">
                                     <strong>{Math.round(item.할인율 * 100)}%</strong>
-                                    <em>{Math.round((item.정가 * 1-item.할인율)).toLocaleString('ko-KO')}원</em>
+                                    <em>{Math.round((item.정가 * (1-item.할인율))).toLocaleString('ko-KO')}원</em>
                                 </div>
                                 <div className="p4">
                                     <img src="./img/section2/mention.svg" alt="" />
@@ -683,9 +661,7 @@ export default function Section7ChildComponent ({ 샐러드, 과일, 계란, 베
                         <div className="gap">
                             <div className="img-box">
                                 <img src={`./img/section7/noodle/${item.이미지}`} alt="" />
-                                <div className="discount-box">
-                                    <h4>15%쿠폰+증정</h4>
-                                </div>
+                                
                             </div>
                             <div className="btn-box">
                                 <button>
@@ -698,7 +674,7 @@ export default function Section7ChildComponent ({ 샐러드, 과일, 계란, 베
                                 <div className="p2"><h5>{item.정가.toLocaleString('ko-KO')}원</h5></div>
                                 <div className="p3">
                                     <strong>{Math.round(item.할인율 * 100)}%</strong>
-                                    <em>{Math.round((item.정가 * 1-item.할인율)).toLocaleString('ko-KO')}원</em>
+                                    <em>{Math.round((item.정가 * (1-item.할인율))).toLocaleString('ko-KO')}원</em>
                                 </div>
                                 <div className="p4">
                                     <img src="./img/section2/mention.svg" alt="" />
@@ -720,9 +696,7 @@ export default function Section7ChildComponent ({ 샐러드, 과일, 계란, 베
                         <div className="gap">
                             <div className="img-box">
                                 <img src={`./img/section7/pet/${item.이미지}`} alt="" />
-                                <div className="discount-box">
-                                    <h4>15%쿠폰+증정</h4>
-                                </div>
+                                
                             </div>
                             <div className="btn-box">
                                 <button>
@@ -735,7 +709,7 @@ export default function Section7ChildComponent ({ 샐러드, 과일, 계란, 베
                                 <div className="p2"><h5>{item.정가.toLocaleString('ko-KO')}원</h5></div>
                                 <div className="p3">
                                     <strong>{Math.round(item.할인율 * 100)}%</strong>
-                                    <em>{Math.round((item.정가 * 1-item.할인율)).toLocaleString('ko-KO')}원</em>
+                                    <em>{Math.round((item.정가 * (1-item.할인율))).toLocaleString('ko-KO')}원</em>
                                 </div>
                                 <div className="p4">
                                     <img src="./img/section2/mention.svg" alt="" />
@@ -757,9 +731,7 @@ export default function Section7ChildComponent ({ 샐러드, 과일, 계란, 베
                         <div className="gap">
                             <div className="img-box">
                                 <img src={`./img/section7/skincare/${item.이미지}`} alt="" />
-                                <div className="discount-box">
-                                    <h4>15%쿠폰+증정</h4>
-                                </div>
+                                
                             </div>
                             <div className="btn-box">
                                 <button>
@@ -772,7 +744,7 @@ export default function Section7ChildComponent ({ 샐러드, 과일, 계란, 베
                                 <div className="p2"><h5>{item.정가.toLocaleString('ko-KO')}원</h5></div>
                                 <div className="p3">
                                     <strong>{Math.round(item.할인율 * 100)}%</strong>
-                                    <em>{Math.round((item.정가 * 1-item.할인율)).toLocaleString('ko-KO')}원</em>
+                                    <em>{Math.round((item.정가 * (1-item.할인율))).toLocaleString('ko-KO')}원</em>
                                 </div>
                                 <div className="p4">
                                     <img src="./img/section2/mention.svg" alt="" />
@@ -794,9 +766,7 @@ export default function Section7ChildComponent ({ 샐러드, 과일, 계란, 베
                         <div className="gap">
                             <div className="img-box">
                                 <img src={`./img/section7/snack/${item.이미지}`} alt="" />
-                                <div className="discount-box">
-                                    <h4>15%쿠폰+증정</h4>
-                                </div>
+                                
                             </div>
                             <div className="btn-box">
                                 <button>
@@ -809,7 +779,7 @@ export default function Section7ChildComponent ({ 샐러드, 과일, 계란, 베
                                 <div className="p2"><h5>{item.정가.toLocaleString('ko-KO')}원</h5></div>
                                 <div className="p3">
                                     <strong>{Math.round(item.할인율 * 100)}%</strong>
-                                    <em>{Math.round((item.정가 * 1-item.할인율)).toLocaleString('ko-KO')}원</em>
+                                    <em>{Math.round((item.정가 * (1-item.할인율))).toLocaleString('ko-KO')}원</em>
                                 </div>
                                 <div className="p4">
                                     <img src="./img/section2/mention.svg" alt="" />
@@ -831,9 +801,7 @@ export default function Section7ChildComponent ({ 샐러드, 과일, 계란, 베
                         <div className="gap">
                             <div className="img-box">
                                 <img src={`./img/section7/tradi/${item.이미지}`} alt="" />
-                                <div className="discount-box">
-                                    <h4>15%쿠폰+증정</h4>
-                                </div>
+                                
                             </div>
                             <div className="btn-box">
                                 <button>
@@ -846,7 +814,7 @@ export default function Section7ChildComponent ({ 샐러드, 과일, 계란, 베
                                 <div className="p2"><h5>{item.정가.toLocaleString('ko-KO')}원</h5></div>
                                 <div className="p3">
                                     <strong>{Math.round(item.할인율 * 100)}%</strong>
-                                    <em>{Math.round((item.정가 * 1-item.할인율)).toLocaleString('ko-KO')}원</em>
+                                    <em>{Math.round((item.정가 * (1-item.할인율))).toLocaleString('ko-KO')}원</em>
                                 </div>
                                 <div className="p4">
                                     <img src="./img/section2/mention.svg" alt="" />
@@ -868,9 +836,7 @@ export default function Section7ChildComponent ({ 샐러드, 과일, 계란, 베
                         <div className="gap">
                             <div className="img-box">
                                 <img src={`./img/section7/vegi/${item.이미지}`} alt="" />
-                                <div className="discount-box">
-                                    <h4>15%쿠폰+증정</h4>
-                                </div>
+                                
                             </div>
                             <div className="btn-box">
                                 <button>
@@ -883,7 +849,7 @@ export default function Section7ChildComponent ({ 샐러드, 과일, 계란, 베
                                 <div className="p2"><h5>{item.정가.toLocaleString('ko-KO')}원</h5></div>
                                 <div className="p3">
                                     <strong>{Math.round(item.할인율 * 100)}%</strong>
-                                    <em>{Math.round((item.정가 * 1-item.할인율)).toLocaleString('ko-KO')}원</em>
+                                    <em>{Math.round((item.정가 * (1-item.할인율))).toLocaleString('ko-KO')}원</em>
                                 </div>
                                 <div className="p4">
                                     <img src="./img/section2/mention.svg" alt="" />
@@ -905,9 +871,7 @@ export default function Section7ChildComponent ({ 샐러드, 과일, 계란, 베
                         <div className="gap">
                             <div className="img-box">
                                 <img src={`./img/section7/water/${item.이미지}`} alt="" />
-                                <div className="discount-box">
-                                    <h4>15%쿠폰+증정</h4>
-                                </div>
+                                
                             </div>
                             <div className="btn-box">
                                 <button>
@@ -920,7 +884,7 @@ export default function Section7ChildComponent ({ 샐러드, 과일, 계란, 베
                                 <div className="p2"><h5>{item.정가.toLocaleString('ko-KO')}원</h5></div>
                                 <div className="p3">
                                     <strong>{Math.round(item.할인율 * 100)}%</strong>
-                                    <em>{Math.round((item.정가 * 1-item.할인율)).toLocaleString('ko-KO')}원</em>
+                                    <em>{Math.round((item.정가 * (1-item.할인율))).toLocaleString('ko-KO')}원</em>
                                 </div>
                                 <div className="p4">
                                     <img src="./img/section2/mention.svg" alt="" />
@@ -942,9 +906,7 @@ export default function Section7ChildComponent ({ 샐러드, 과일, 계란, 베
                         <div className="gap">
                             <div className="img-box">
                                 <img src={`./img/section7/wine/${item.이미지}`} alt="" />
-                                <div className="discount-box">
-                                    <h4>15%쿠폰+증정</h4>
-                                </div>
+                                
                             </div>
                             <div className="btn-box">
                                 <button>
@@ -957,7 +919,7 @@ export default function Section7ChildComponent ({ 샐러드, 과일, 계란, 베
                                 <div className="p2"><h5>{item.정가.toLocaleString('ko-KO')}원</h5></div>
                                 <div className="p3">
                                     <strong>{Math.round(item.할인율 * 100)}%</strong>
-                                    <em>{Math.round((item.정가 * 1-item.할인율)).toLocaleString('ko-KO')}원</em>
+                                    <em>{Math.round((item.정가 * (1-item.할인율))).toLocaleString('ko-KO')}원</em>
                                 </div>
                                 <div className="p4">
                                     <img src="./img/section2/mention.svg" alt="" />
@@ -979,9 +941,7 @@ export default function Section7ChildComponent ({ 샐러드, 과일, 계란, 베
                         <div className="gap">
                             <div className="img-box">
                                 <img src={`./img/section7/seafood/${item.이미지}`} alt="" />
-                                <div className="discount-box">
-                                    <h4>15%쿠폰+증정</h4>
-                                </div>
+                                
                             </div>
                             <div className="btn-box">
                                 <button>
@@ -994,7 +954,7 @@ export default function Section7ChildComponent ({ 샐러드, 과일, 계란, 베
                                 <div className="p2"><h5>{item.정가.toLocaleString('ko-KO')}원</h5></div>
                                 <div className="p3">
                                     <strong>{Math.round(item.할인율 * 100)}%</strong>
-                                    <em>{Math.round((item.정가 * 1-item.할인율)).toLocaleString('ko-KO')}원</em>
+                                    <em>{Math.round((item.정가 * (1-item.할인율))).toLocaleString('ko-KO')}원</em>
                                 </div>
                                 <div className="p4">
                                     <img src="./img/section2/mention.svg" alt="" />

@@ -2,7 +2,7 @@ import React from 'react';
 
 import { WrapContext } from '../wrapContext/WrapContext';
 
-export default function Sub1ChildComponent ({슬라이드}) {
+export default function Sub1ChildComponent ({신상품}) {
 
     const {currentViewProduct} = React.useContext(WrapContext)
 
@@ -17,7 +17,7 @@ const [flag, setFlag] = React.useState(false);
     return (
     <div className="slide-view">
         <ul className="slide-wrap">
-            {슬라이드.map((item,idx)=>{
+            {신상품.map((item,idx)=>{
             return(
                 <li onClick={(e)=>onClickViewProduct(e, item, './img/sub1/')} className="slide" key={item.번호}>
                     <div className="gap">

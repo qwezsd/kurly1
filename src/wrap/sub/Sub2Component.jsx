@@ -24,7 +24,7 @@ const [state, setState] = React.useState({
     issub6 : true,
 
     comment : false,
-    슬라이드:[]
+    베스트:[]
 })
 const [state2, setState2] = React.useState({
 
@@ -250,13 +250,13 @@ const onMouseLeaveComment = ()=>{
 }
 
 axios({
-    url : './data/sub/sub1.json',
+    url : './data/sub/sub2.json',
     method : 'GET'
 })
 .then((res)=>{
     setState({
         ...state,
-        슬라이드 : res.data.슬라이드
+        베스트 : res.data.베스트
     })
 })
 .catch((err)=>{
@@ -264,9 +264,6 @@ axios({
     return (
         <div id='sub2'>
             <div className="container">
-                <div className="main-img">
-                    <a href="!#"><img src="./img/sub1/K55OxyfwVlSr1BigzjhQSKAIzi0WNulp0EnVvnMQ.jpg" alt="" /></a>
-                </div>
                 <div className="title">
                     <h2>베스트</h2>
                 </div>
@@ -1259,7 +1256,7 @@ axios({
                                 <span>높은 가격순</span>
                             </div>
                         </div>  
-                        <Sub2ChildComponent currentViewProduct={currentViewProduct} 슬라이드={state.슬라이드} />
+                        <Sub2ChildComponent currentViewProduct={currentViewProduct} 베스트={state.베스트} />
                     </div>
                 </div>
             </div>

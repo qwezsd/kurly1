@@ -24,7 +24,7 @@ const [state, setState] = React.useState({
     issub6 : true,
 
     comment : false,
-    슬라이드:[]
+    신상품:[]
 })
 const [state2, setState2] = React.useState({
 
@@ -256,7 +256,7 @@ axios({
 .then((res)=>{
     setState({
         ...state,
-        슬라이드 : res.data.슬라이드
+        신상품 : res.data.신상품
     })
 })
 .catch((err)=>{
@@ -267,7 +267,7 @@ axios({
         <div id='sub1'>
             <div className="container">
                 <div className="main-img">
-                    <a href="!#"><img src="./img/sub1/K55OxyfwVlSr1BigzjhQSKAIzi0WNulp0EnVvnMQ.jpg" alt="" /></a>
+                    <a href="!#"><img src="./img/sub1/F2uGXatyNQnwEthnqFshJlSXDtd34B98hsuQDpAX.jpg" alt="" /></a>
                 </div>
                 <div className="title">
                     <h2>신상품</h2>
@@ -1261,7 +1261,7 @@ axios({
                                 <span>높은 가격순</span>
                             </div>
                         </div>
-                        <Sub1ChildComponent currentViewProduct={currentViewProduct} 슬라이드={state.슬라이드} />
+                        <Sub1ChildComponent currentViewProduct={currentViewProduct} 신상품={state.신상품} />
                     </div>
                 </div>
             </div>

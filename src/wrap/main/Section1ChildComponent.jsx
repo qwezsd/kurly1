@@ -16,7 +16,7 @@ export default function Section1ChildComponent ({슬라이드}) {
     }, [슬라이드])
     //메인 슬라이드
     const mainSlide = () => {
-        slideWrap.current.style.transform = `translate(${-1785 * cnt}px)`
+        slideWrap.current.style.transform = `translate(${-1800 * cnt}px)`
         slideWrap.current.style.transition = `all 0.5s ease-in-out`
         console.log(cnt)
         returnSlide();
@@ -40,13 +40,13 @@ export default function Section1ChildComponent ({슬라이드}) {
         if(cnt>n){
             setCnt(1)
             setToggle(1)
-            slideWrap.current.style.transform = `translate(${-1785 * 0}px)`
+            slideWrap.current.style.transform = `translate(${-1800 * 0}px)`
             slideWrap.current.style.transition = `none`
         }
         if (cnt<0){
             setCnt(n-1)
             setToggle(1)
-            slideWrap.current.style.transform = `translate(${-1785 * n}px)`
+            slideWrap.current.style.transform = `translate(${-1800 * n}px)`
             slideWrap.current.style.transition = `none`
         }
     }
