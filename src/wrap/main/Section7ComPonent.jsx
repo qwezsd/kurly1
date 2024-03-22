@@ -86,7 +86,7 @@ React.useEffect(()=>{
     }
 )
 })
-    
+
     
     return (
         <div id='section7'>
