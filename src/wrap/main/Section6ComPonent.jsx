@@ -8,7 +8,7 @@ export default function Section6ComPonent () {
 
     const { currentViewProduct } = React.useContext( WrapContext );
 
-    // const [cnt, setCnt] = React.useState(0)
+
     const slide = React.useRef();
     const slideBox = React.useRef();
     const [n, setN] = React.useState(0);
@@ -57,10 +57,8 @@ export default function Section6ComPonent () {
 
     const [product, setProduct] = React.useState([]);
     const [flag, setFlag] = React.useState(false);
-    // 1. 최근 본 상품 클릭 이벤트
-    // 누르면 개발바모드 컴포넌트에서 후입선출, 
-
-    // 1. 최근 본 상품 클릭 이벤트
+    
+    
     const onClickViewProduct=(e, item, imgPath)=>{
         e.preventDefault();
         currentViewProduct(item, imgPath);

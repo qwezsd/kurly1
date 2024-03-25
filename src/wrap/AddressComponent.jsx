@@ -38,10 +38,10 @@ export default function AddressComponent () {
         console.log(data.buildingName)
         
         let 주소1 = '';
-        if (data.userSelectedType === 'R'){ //도로명 주소를 클릭
+        if (data.userSelectedType === 'R'){ 
             주소1 =`${data.address} (${data.buildingName})`
         }
-        else { // 지번주소를 클릭
+        else { 
             주소1 = `${data.jibunAddress}`
         }
         setState({
@@ -49,7 +49,7 @@ export default function AddressComponent () {
             주소1: 주소1
         })
     }
-    // 주소 저장
+
     const onClickSave =(e)=>{
         e.preventDefault();
         addressSave(state.주소1, state.주소2)

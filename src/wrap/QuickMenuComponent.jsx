@@ -19,8 +19,6 @@ export default function QuickMenuComponent () {
 
         window.addEventListener('scroll', function(){
             let isfixed = false;
-            // console.log(window.scrollY)
-            // console.log( quickMenu.current.offsetTop)
             if(window.scrollY >= 460){//460
                 isfixed = true;
             }
