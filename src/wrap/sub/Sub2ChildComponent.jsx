@@ -8,7 +8,7 @@ export default function Sub2ChildComponent ({베스트}) {
     const [product, setProduct] = React.useState([]);
     const [flag, setFlag] = React.useState(false);
     
-        // 1. 최근 본 상품 클릭 이벤트
+
         const onClickViewProduct=(e, item, imgPath)=>{
             e.preventDefault();
             currentViewProduct(item, imgPath)

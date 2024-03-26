@@ -3,11 +3,11 @@ import { WrapContext } from '../wrapContext/WrapContext';
 
 export default function Sub3ChildComponent ({알뜰쇼핑}) {
 
-    const [product, setProduct] = React.useState([]);
-    const [flag, setFlag] = React.useState(false);
+    // const [product, setProduct] = React.useState([]);
+    // const [flag, setFlag] = React.useState(false);
     
     const {currentViewProduct} = React.useContext(WrapContext)
-        // 1. 최근 본 상품 클릭 이벤트
+
         const onClickViewProduct=(e, item, imgPath)=>{
             e.preventDefault();
             currentViewProduct(item, imgPath)
