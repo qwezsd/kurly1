@@ -77,17 +77,17 @@ export default function HeaderComponent () {
                         <div className="row1">
                             <Link to="/sub5"><h4 className='signUp'>회원가입</h4></Link>
                             <i>|</i>
-                            <h4>로그인</h4>
+                            <Link to="/sub6"><h4>로그인</h4></Link>
                             <i>|</i>
                             <h4 className='clientNotice' onMouseEnter={onMouseEnterClient} onMouseLeave={onMouseLeaveClient}>고객센터<img src="./img/header/ico_down_16x10.jpg" alt="" />
                             {
                                 state.notice && 
                             
                             <div className="notice-box" onMouseEnter={onMouseEnterClient}  onMouseLeave={onMouseLeaveClient}>
-                                <li><a href="!#">공지사항</a></li>
-                                <li><a href="!#">자주하는 질문</a></li>
-                                <li><a href="!#">1:1 문의</a></li>
-                                <li><a href="!#">대량주문 문의</a></li>
+                                <li><a href="#">공지사항</a></li>
+                                <li><a href="#">자주하는 질문</a></li>
+                                <li><a href="#">1:1 문의</a></li>
+                                <li><a href="#">대량주문 문의</a></li>
                             </div>
                             
                             }
@@ -96,7 +96,7 @@ export default function HeaderComponent () {
                         </div>
                         <div className="row2">
                             <div className="left">
-                                <a href="./index"><img src="./img/header/main_title.svg" alt="" /></a>
+                                <a href="../../public/index.html"><img src="./img/header/main_title.svg" alt="" /></a>
                                 <h3>마켓컬리</h3>
                                 <i>|</i>
                                 <h3 className='beauty'>뷰티컬리</h3>
