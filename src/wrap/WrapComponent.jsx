@@ -17,6 +17,8 @@ import Sub3Component from './sub/Sub3Component';
 import Sub4Component from './sub/Sub4Component';
 import Sub5Component from './sub/Sub5Component';
 import Sub6Component from './sub/Sub6Component';
+import Sub7Component from './sub/Sub7Component';
+import Sub8Component from './sub/Sub8Component';
 
 
 import { WrapContext } from './wrapContext/WrapContext';
@@ -164,6 +166,8 @@ export default function WrapComponent () {
                         <Route path='/sub4' element={<Sub4Component />} />
                         <Route path='/sub5' element={<Sub5Component />} />
                         <Route path='/sub6' element={<Sub6Component />} />
+                        <Route path='/sub7' element={<Sub7Component />} />
+                        <Route path='/sub8' element={<Sub8Component />} />
                     </Route>
                 </Routes>
             </BrowserRouter>

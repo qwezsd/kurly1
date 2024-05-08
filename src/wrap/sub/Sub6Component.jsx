@@ -14,9 +14,9 @@ export default function Sub6Component () {
                         <input placeholder='비밀번호를 입력해주세요' type="text" />
                     </div>
                     <div className="find">
-                        <h4>아이디 찾기</h4>
+                        <a href="/sub7"><h4>아이디 찾기</h4></a>
                         <i>|</i>
-                        <h4>비밀번호 찾기</h4>
+                        <a href="/sub8"><h4>비밀번호 찾기</h4></a>
                     </div>
                     <div className="btn">
                         <button className='logIn'>로그인</button>
