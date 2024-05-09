@@ -49,7 +49,7 @@ export default function Section3ComPonent () {
 
 
     React.useEffect(()=>{
-        let startTime = new Date("2023-11-07 11:00:00")//타임 세일 시작일시
+        let startTime = new Date("2024-05-09 11:00:00")//타임 세일 시작일시
         let nowTime = new Date(); //현재 일시
             startTime = (startTime.setHours(startTime.getHours() + 24)) // 시간 세터함수 + 24
         let endTime = startTime - nowTime;

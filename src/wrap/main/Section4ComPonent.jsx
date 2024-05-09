@@ -49,10 +49,11 @@ export default function Section4ComPonent () {
     })
 
 
+
     React.useEffect(()=>{
-        let startTime = new Date("2023-11-07 11:00:00")//타임 세일 시작일시
+        let startTime = new Date("2024-05-09 14:00:00")//타임 세일 시작일시
         let nowTime = new Date(); //현재 일시
-            startTime = (startTime.setHours(startTime.getHours() + 24)) // 시간 세터함수 + 24
+            startTime = (startTime.setHours(startTime.getHours() + 48)) // 시간 세터함수 + 24
         let endTime = startTime - nowTime;
 
         let H = Math.floor(endTime/(60*60*1000)%24)// 나머지 시간
@@ -87,8 +88,6 @@ export default function Section4ComPonent () {
     }
         setInterval(timeSaleFn, 1000)
     }, [state2.H, state2.M, state2.S])
-    const [product, setProduct] = React.useState([]);
-    const [flag, setFlag] = React.useState(false);
     // 1. 최근 본 상품 클릭 이벤트
     // 누르면 개발바모드 컴포넌트에서 후입선출, 
 
@@ -111,7 +110,7 @@ export default function Section4ComPonent () {
                                     <li className="slide" >
                                         <div className="gap">
                                             <div className="text1">
-                                                <h2>🥇뷰컬페 1주년 일일특가</h2>
+                                                <h2>🥇뷰컬페 일일특가</h2>
                                             </div>
                                             <div className="text2">
                                                 <h4>24시간 한정 일일특가</h4>
