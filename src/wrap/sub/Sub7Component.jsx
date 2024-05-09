@@ -31,7 +31,8 @@ export default function Sub7Component () {
                         <h3 onClick={onClickphone} className={state.phone ? 'on' : 'off'}>휴대폰 인증</h3>
                         <h3 onClick={onClickEmail} className={state.eMail ? 'on' : 'off'}>이메일 인증</h3>
                     </div>
-                    {state.phone  &&
+                    {
+                    state.phone  &&
                         <div className="phone">
                         <ul>
                             <li>
@@ -52,8 +53,10 @@ export default function Sub7Component () {
                                 </div>
                             </li>
                         </ul>
-                    </div>}
-                   {state.eMail && 
+                    </div>
+                    }
+                   {
+                   state.eMail && 
                     <div className="eMail">
                         <ul>
                             <li>
@@ -74,7 +77,8 @@ export default function Sub7Component () {
                                 </div>
                             </li>
                         </ul>
-                    </div>}
+                    </div>
+                    }
                 </div>
             </div>
         </div>
