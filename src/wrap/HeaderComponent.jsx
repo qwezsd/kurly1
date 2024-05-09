@@ -96,7 +96,7 @@ export default function HeaderComponent () {
                         </div>
                         <div className="row2">
                             <div className="left">
-                                <a href="../../public/index.html"><img src="./img/header/main_title.svg" alt="" /></a>
+                                <Link to="/index"><img src="./img/header/main_title.svg" alt="" /></Link>
                                 <h3>마켓컬리</h3>
                                 <i>|</i>
                                 <h3 className='beauty'>뷰티컬리</h3>

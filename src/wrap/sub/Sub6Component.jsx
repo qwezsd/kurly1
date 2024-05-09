@@ -1,5 +1,6 @@
 import React from 'react';
 import './sass/sub6.scss'
+import {Link} from 'react-router-dom'
 
 export default function Sub6Component () {
     return (
@@ -14,9 +15,9 @@ export default function Sub6Component () {
                         <input placeholder='비밀번호를 입력해주세요' type="text" />
                     </div>
                     <div className="find">
-                        <a href="/sub7"><h4>아이디 찾기</h4></a>
+                        <Link to="/sub7"><h4>아이디 찾기</h4></Link>
                         <i>|</i>
-                        <a href="/sub8"><h4>비밀번호 찾기</h4></a>
+                        <Link to="/sub8"><h4>비밀번호 찾기</h4></Link>
                     </div>
                     <div className="btn">
                         <button className='logIn'>로그인</button>
